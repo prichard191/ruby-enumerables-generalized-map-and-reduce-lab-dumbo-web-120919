@@ -11,15 +11,15 @@ end
 
 def reduce(s, spf=nil)
   if spf
-    accum = spf
+    honk = spf
     i = 0
   else
-    accum = s[0]
+    honk = s[0]
     i = 1
   end
   while i < s.length
-    accum = yield(accum, s[i])
+    honk = yield(honk, s[i])
     i += 1
   end
-  accum
+  honk
 end
