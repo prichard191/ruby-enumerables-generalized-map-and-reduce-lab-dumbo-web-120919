@@ -6,4 +6,4 @@ def method1 (source_array) do |num|
   return pie
 end
 method1
-def method2 
+def method2
