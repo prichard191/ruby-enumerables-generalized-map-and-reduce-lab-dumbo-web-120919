@@ -1,11 +1,25 @@
 # Your Code Here
-source_array=[1,2,3,4]
-
-def method1 (source_array) do |num|
-  pie =[]
-  pie.push = (source_array[num] * -1)
+def map(bleep)
+  new = []
+  i = 0
+  while i < bleep.length
+    new.push(yield(bleep[i]))
+    i += 1
   end
-  return pie
+  new
 end
 
-def method2
+def reduce(s, spf=nil)
+  if spf
+    accum = spf
+    i = 0
+  else
+    accum = s[0]
+    i = 1
+  end
+  while i < s.length
+    accum = yield(accum, s[i])
+    i += 1
+  end
+  accum
+end
