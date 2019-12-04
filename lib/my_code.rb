@@ -6,4 +6,3 @@ end
 return new
 
 def method2
-  
